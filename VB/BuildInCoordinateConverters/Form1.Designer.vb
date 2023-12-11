@@ -1,5 +1,7 @@
-﻿Namespace BuildInCoordinateConverters
-    Partial Public Class Form1
+Namespace BuildInCoordinateConverters
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,33 +12,33 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Dim imageTilesLayer1 As New DevExpress.XtraMap.ImageTilesLayer()
-            Dim bingMapDataProvider1 As New DevExpress.XtraMap.BingMapDataProvider()
+            Dim imageTilesLayer1 As DevExpress.XtraMap.ImageTilesLayer = New DevExpress.XtraMap.ImageTilesLayer()
+            Dim bingMapDataProvider1 As DevExpress.XtraMap.BingMapDataProvider = New DevExpress.XtraMap.BingMapDataProvider()
             Me.layoutControl1 = New DevExpress.XtraLayout.LayoutControl()
             Me.cbData = New System.Windows.Forms.ComboBox()
             Me.mapControl1 = New DevExpress.XtraMap.MapControl()
             Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
             Me.layoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
             Me.lciDataCombo = New DevExpress.XtraLayout.LayoutControlItem()
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            DirectCast(Me.mapControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciDataCombo, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.mapControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciDataCombo), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' layoutControl1
@@ -69,6 +71,7 @@
             Me.cbData.Name = "cbData"
             Me.cbData.Size = New System.Drawing.Size(602, 21)
             Me.cbData.TabIndex = 6
+            AddHandler Me.cbData.SelectedIndexChanged, New System.EventHandler(AddressOf Me.cbData_SelectedIndexChanged)
             ' 
             ' mapControl1
             ' 
@@ -82,9 +85,9 @@
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.layoutControlItem1, Me.lciDataCombo})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutControlItem1, Me.lciDataCombo})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "layoutControlGroup1"
             Me.layoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
@@ -107,7 +110,7 @@
             Me.lciDataCombo.Name = "lciDataCombo"
             Me.lciDataCombo.Size = New System.Drawing.Size(784, 25)
             Me.lciDataCombo.Text = "Shapefile and Coordinate converter:"
-            Me.lciDataCombo.TextLocation = DevExpress.Utils.Locations.Default
+            Me.lciDataCombo.TextLocation = DevExpress.Utils.Locations.[Default]
             Me.lciDataCombo.TextSize = New System.Drawing.Size(175, 13)
             ' 
             ' Form1
@@ -118,25 +121,27 @@
             Me.Controls.Add(Me.layoutControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            DirectCast(Me.mapControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciDataCombo, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.mapControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciDataCombo), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
-        Private mapControl1 As DevExpress.XtraMap.MapControl
-        Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
-        Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
-        Private WithEvents cbData As System.Windows.Forms.ComboBox
-        Private lciDataCombo As DevExpress.XtraLayout.LayoutControlItem
 
+        Private mapControl1 As DevExpress.XtraMap.MapControl
+
+        Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+
+        Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+
+        Private cbData As System.Windows.Forms.ComboBox
+
+        Private lciDataCombo As DevExpress.XtraLayout.LayoutControlItem
     End Class
 End Namespace
-
